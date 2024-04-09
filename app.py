@@ -15,7 +15,6 @@ def create_task():
     new_task = Task(id=task_id_control, title=data['title'], description=data.get('description', ""))
     task_id_control += 1
     tasks.append(new_task)
-    print("Caralha da task criada: ", new_task)
     return jsonify({ "message": 'New Task created successfully!', "id": new_task.id }), 201
 
 # get all tasks
